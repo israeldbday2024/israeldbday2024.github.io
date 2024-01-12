@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <title>Israel Database Day 2023</title>
+    <meta http-equiv="Content-Language" content="en-us">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Israel Database Day 2023</h1>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <a href="index.html">HOME</a><br>
+            <a href="program.html">PROGRAM</a><br>
+            <a href="#" class="active">VENUE</a><br>
+        </div>
+        <div class="content">
+            <div id="map"></div><br>
+            This year's Israel Database Day is hosted at Ben-Gurion University of the Negev in Be'er Sheva, in the <strong>Alon Building for Hi-Tech (Building 37)</strong>.<br><br>
+            The university is easily accessible from the <strong><img src="railway.png" width="16px"> Be'er Sheva North/University</strong> railway station.<br><br>
+			If you are arriving by car, please ensure to fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGO6gQNfgMCRUjP42yOW3NbeGuGUqstqyfIwFaAbBOaxYSTQ/viewform?usp=sf_link" target="_blank">this form ».</a>
+        </div>
+    </div>
+    <div class="footer">
+        Department of Computer Science, Ben-Gurion University of the Negev
+    </div>
+
+    <script>
+        var map = L.map('map').setView([31.262318278568827, 34.80404528400782], 16);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        var marker = L.marker([31.262318278568827, 34.80404528400782]).addTo(map);
+        marker.bindPopup("Alon Building for Hi-Tech (Building 37)").openPopup();
+    </script>
+</body>
+</html>
