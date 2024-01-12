@@ -9,7 +9,8 @@ html, body {
     height: 100px;
     margin: 0 auto;
     line-height: 40px;
-    background: url('bgu-bg.png');
+/*     background: url('bgu-bg.png'); */
+    background: url('HUJI_LogoEng_hor.jpg');
     background-size: cover;
 }
 
